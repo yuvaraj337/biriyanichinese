@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="/src/styles/hero.css" />
   <link rel="stylesheet" href="/src/styles/menu.css" />
+  <link rel="stylesheet" href="/src/styles/reservation.css" />
 </head>
 <body>
 
@@ -43,10 +44,11 @@
 
     <nav aria-label="Main Navigation">
       <ul class="nav-links">
-        <li><a href="#hero-scroll-wrapper" class="nav-link">Experience</a></li>
-        <li><a href="#menu-section" class="nav-link active">Menu</a></li>
-        <li><a href="#menu-promo-section" class="nav-link">Offers</a></li>
-        <li><a href="#header-location-pill" class="nav-link">Visit Us</a></li>
+        <li><a href="#hero-scroll-wrapper" class="nav-link">Home</a></li>
+        <li><a href="#menu-section" class="nav-link">Menu</a></li>
+        <li><a href="#reservation-section" class="nav-link active">Our Story</a></li>
+        <li><a href="#reservation-section" class="nav-link">Outlets</a></li>
+        <li><a href="#header-location-pill" class="nav-link">Contact</a></li>
       </ul>
     </nav>
 
@@ -61,7 +63,7 @@
         <span class="header-cart-badge" id="header-cart-badge">0</span>
       </button>
 
-      <a href="#menu-section" class="header-cta" id="header-reserve-btn">Order Now &rarr;</a>
+      <a href="#reservation-section" class="header-cta" id="header-reserve-btn" data-open-reservation>Reserve Table</a>
     </div>
 
     <!-- Scroll progress indicator -->
@@ -528,6 +530,166 @@
     </section><!-- /.menu-section -->
 
     <!-- ==========================================================================
+         TABLE RESERVATION SECTION
+         Visual Source of Truth: table_reservation_reference.jpg
+         ========================================================================== -->
+    <section class="reservation-section" id="reservation-section" aria-label="Table Reservation">
+      <!-- Ambient warm lighting glow -->
+      <div class="reservation-ambient-glow"></div>
+
+      <div class="reservation-hero-container">
+        <!-- Left Content Area -->
+        <div class="reservation-content-left">
+          <!-- Eyebrow: GOOD FOOD BETTER COMPANY flanked by thin lines -->
+          <div class="reservation-eyebrow">
+            <span class="flank-line"></span>
+            <span class="reservation-eyebrow-text">GOOD FOOD BETTER COMPANY</span>
+            <span class="flank-line"></span>
+          </div>
+
+          <!-- Main Heading: Book Your Table -->
+          <h2 class="reservation-title">
+            <span>Book Your</span>
+            <span>Table</span>
+          </h2>
+
+          <!-- Supporting Text -->
+          <p class="reservation-desc">
+            Great food, warm conversations and unforgettable moments. Reserve your table and let us take care of the rest.
+          </p>
+
+          <!-- Reserve a Table CTA Button -->
+          <button class="btn-reserve-table-prominent" id="btn-reserve-table-prominent" data-open-reservation aria-label="Reserve a Table">
+            <svg class="btn-calendar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+              <circle cx="8" cy="14" r="1" fill="currentColor"></circle>
+              <circle cx="12" cy="14" r="1" fill="currentColor"></circle>
+              <circle cx="16" cy="14" r="1" fill="currentColor"></circle>
+              <circle cx="8" cy="18" r="1" fill="currentColor"></circle>
+              <circle cx="12" cy="18" r="1" fill="currentColor"></circle>
+              <circle cx="16" cy="18" r="1" fill="currentColor"></circle>
+            </svg>
+            <span>Reserve a Table</span>
+            <svg class="btn-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+          <!-- Three Trust Badges -->
+          <div class="reservation-trust-row">
+            <div class="trust-badge-item">
+              <div class="trust-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span class="trust-badge-text">Perfect for<br />Families &amp; Friends</span>
+            </div>
+
+            <div class="trust-badge-item">
+              <div class="trust-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <span class="trust-badge-text">Ideal for<br />Special Occasions</span>
+            </div>
+
+            <div class="trust-badge-item">
+              <div class="trust-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </div>
+              <span class="trust-badge-text">A Memorable<br />Dining Experience</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Area (Restaurant Interior) -->
+        <div class="reservation-visual-right">
+          <div class="reservation-img-frame">
+            <img 
+              src="/menu_assets/restaurant_interior_faded.png" 
+              alt="Biryani &amp; Chinese District Luxury Candlelit Dining Room" 
+              class="reservation-interior-img"
+              loading="lazy"
+            />
+            <div class="reservation-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Feature Strip (4 Benefit Items) -->
+      <div class="reservation-benefits-strip">
+        <div class="benefit-card-item">
+          <div class="benefit-card-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <div class="benefit-card-details">
+            <span class="benefit-card-title">Cozy Ambience</span>
+            <span class="benefit-card-desc">A warm and welcoming space.</span>
+          </div>
+        </div>
+
+        <div class="benefit-card-item">
+          <div class="benefit-card-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="benefit-card-details">
+            <span class="benefit-card-title">Perfect for Gatherings</span>
+            <span class="benefit-card-desc">Family dinners, friends &amp; more.</span>
+          </div>
+        </div>
+
+        <div class="benefit-card-item">
+          <div class="benefit-card-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="6 3 18 3 22 9 12 22 2 9 6 3"></polygon>
+              <line x1="2" y1="9" x2="22" y2="9"></line>
+              <line x1="12" y1="22" x2="8" y2="9"></line>
+              <line x1="12" y1="22" x2="16" y2="9"></line>
+              <line x1="6" y1="3" x2="8" y2="9"></line>
+              <line x1="18" y1="3" x2="16" y2="9"></line>
+            </svg>
+          </div>
+          <div class="benefit-card-details">
+            <span class="benefit-card-title">Special Occasions</span>
+            <span class="benefit-card-desc">Birthdays, anniversaries, celebrations.</span>
+          </div>
+        </div>
+
+        <div class="benefit-card-item">
+          <div class="benefit-card-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <div class="benefit-card-details">
+            <span class="benefit-card-title">Prime Location</span>
+            <span class="benefit-card-desc">Meherma Barahat Pirpanti Road,<br />Near Purana Naaz Cinema Hall.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
          STICKY BOTTOM CART BAR
          ========================================================================== -->
     <aside class="sticky-cart-bar" id="sticky-cart-bar" aria-label="Sticky Cart Summary">
@@ -582,6 +744,153 @@
         <button class="btn-cart-checkout" id="cart-checkout-btn">
           Place Order &rarr;
         </button>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         TABLE RESERVATION BOOKING MODAL (Hidden until Reserve a Table is clicked)
+         ========================================================================== -->
+    <div class="reservation-modal-overlay" id="reservation-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="reservation-modal-title">
+      <div class="reservation-modal-dialog" id="reservation-modal-dialog">
+        <!-- Modal Header -->
+        <div class="reservation-modal-header">
+          <div class="modal-header-text">
+            <h3 class="reservation-modal-title" id="reservation-modal-title">Reserve a Table</h3>
+            <span class="reservation-modal-subtitle">Join us for a royal dining experience</span>
+          </div>
+          <button class="btn-modal-close close-reservation-modal" aria-label="Close Reservation Modal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Reservation Input Form -->
+        <form id="reservation-form" novalidate>
+          <div class="reservation-form-grid">
+            <!-- Full Name -->
+            <div class="form-field">
+              <label for="res-name" class="form-label">Full Name *</label>
+              <input type="text" id="res-name" class="form-input" placeholder="e.g. Rahul Sharma" required />
+              <span class="form-error-msg">Please enter your name</span>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-field">
+              <label for="res-phone" class="form-label">Phone Number *</label>
+              <input type="tel" id="res-phone" class="form-input" placeholder="10-digit mobile number" maxlength="10" required />
+              <span class="form-error-msg">Please enter a valid 10-digit number</span>
+            </div>
+
+            <!-- Date -->
+            <div class="form-field">
+              <label for="res-date" class="form-label">Date *</label>
+              <input type="date" id="res-date" class="form-input" required />
+              <span class="form-error-msg">Please choose a valid date</span>
+            </div>
+
+            <!-- Preferred Time -->
+            <div class="form-field">
+              <label for="res-time" class="form-label">Preferred Time *</label>
+              <select id="res-time" class="form-select" required>
+                <option value="" disabled selected>Select dining time</option>
+                <option value="12:00 PM">12:00 PM (Lunch)</option>
+                <option value="01:00 PM">01:00 PM (Lunch)</option>
+                <option value="02:00 PM">02:00 PM (Lunch)</option>
+                <option value="03:00 PM">03:00 PM (Late Lunch)</option>
+                <option value="07:00 PM">07:00 PM (Dinner)</option>
+                <option value="08:00 PM">08:00 PM (Dinner)</option>
+                <option value="08:30 PM">08:30 PM (Dinner)</option>
+                <option value="09:00 PM">09:00 PM (Dinner)</option>
+                <option value="09:30 PM">09:30 PM (Late Dinner)</option>
+                <option value="10:00 PM">10:00 PM (Late Dinner)</option>
+              </select>
+              <span class="form-error-msg">Please select a time</span>
+            </div>
+
+            <!-- Number of Guests -->
+            <div class="form-field">
+              <label for="res-guests" class="form-label">Number of Guests *</label>
+              <select id="res-guests" class="form-select" required>
+                <option value="" disabled selected>Select number of guests</option>
+                <option value="1">1 Person (Solo Dining)</option>
+                <option value="2">2 Persons (Couple / Date)</option>
+                <option value="3">3 Persons</option>
+                <option value="4">4 Persons (Standard Table)</option>
+                <option value="5">5 Persons</option>
+                <option value="6">6 Persons (Family Table)</option>
+                <option value="8">8 Persons (Celebration Group)</option>
+                <option value="10">10+ Persons (Large Gathering)</option>
+              </select>
+              <span class="form-error-msg">Please select guest count</span>
+            </div>
+
+            <!-- Occasion -->
+            <div class="form-field">
+              <label for="res-occasion" class="form-label">Occasion</label>
+              <select id="res-occasion" class="form-select">
+                <option value="Family Dining">Family Dining</option>
+                <option value="Birthday Celebration">Birthday</option>
+                <option value="Anniversary">Anniversary</option>
+                <option value="Date Night">Date Night</option>
+                <option value="Friends &amp; Family">Friends &amp; Family</option>
+                <option value="Business Lunch">Business Lunch</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <!-- Special Requests -->
+            <div class="form-field form-group-full">
+              <label for="res-requests" class="form-label">Special Requests (Optional)</label>
+              <textarea id="res-requests" class="form-textarea" placeholder="Seating preference, birthday candle, high chair, dietary notes..."></textarea>
+            </div>
+
+            <!-- Modal Action Buttons -->
+            <div class="modal-actions-row">
+              <button type="button" class="btn-modal-cancel close-reservation-modal">Cancel</button>
+              <button type="submit" class="btn-modal-submit" id="btn-submit-reservation">
+                <span>Confirm Reservation</span>
+                <span class="btn-arrow">&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Post-Submission Confirmation State -->
+        <div class="reservation-confirm-card" id="reservation-confirm-card">
+          <div class="confirm-badge-icon">&#10003;</div>
+          <h3 class="confirm-main-title">Reservation Request Received</h3>
+          <p class="confirm-greeting" id="confirm-customer-name">Thank you!</p>
+          <p class="confirm-notice">
+            Our team will contact you shortly to confirm your table and ensure a wonderful dining experience.
+          </p>
+
+          <div class="confirm-details-summary">
+            <div class="summary-row">
+              <span class="summary-label">Name:</span>
+              <span class="summary-val" id="summary-res-name">-</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Phone:</span>
+              <span class="summary-val" id="summary-res-phone">-</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Date &amp; Time:</span>
+              <span class="summary-val" id="summary-res-datetime">-</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Party Size:</span>
+              <span class="summary-val" id="summary-res-guests">-</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Occasion:</span>
+              <span class="summary-val" id="summary-res-occasion">-</span>
+            </div>
+          </div>
+
+          <button type="button" class="btn-confirm-done" id="btn-reservation-done">Done</button>
+        </div>
       </div>
     </div>
   </main>

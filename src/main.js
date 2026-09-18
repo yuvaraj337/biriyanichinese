@@ -5,6 +5,7 @@ import { SteamTransition } from './components/SteamTransition.js';
 import { HeroTimeline } from './components/HeroTimeline.js';
 import { CartController } from './components/CartController.js';
 import { MenuController } from './components/MenuController.js';
+import { ReservationController } from './components/ReservationController.js';
 
 class App {
   constructor() {
@@ -23,6 +24,7 @@ class App {
     this.heroTimeline = null;
     this.cartController = null;
     this.menuController = null;
+    this.reservationController = null;
 
     this.resizeTimeout = null;
 
@@ -53,7 +55,10 @@ class App {
     // 7. Initialize Menu Controller
     this.menuController = new MenuController(this.cartController);
 
-    // 8. Setup CTA scroll listeners
+    // 8. Initialize Reservation Controller
+    this.reservationController = new ReservationController();
+
+    // 9. Setup CTA scroll listeners
     this.setupInteractions();
   }
 
