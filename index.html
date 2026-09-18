@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" content="#080605" />
+  <title>Biryani &amp; Chinese District | A Taste Beyond Ordinary</title>
+  <meta name="description" content="Experience the authentic flavours of royal biryanis and signature Chinese dishes at Biryani &amp; Chinese District. A journey of aromas, heritage, and culinary artistry." />
+  
+  <!-- Google Fonts: Playfair Display, Cinzel, and Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/src/styles/hero.css" />
+  <link rel="stylesheet" href="/src/styles/menu.css" />
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-left">
+      <a href="#" class="brand-logo" aria-label="Biryani &amp; Chinese District Home">
+        <img src="/menu_assets/restaurant_logo.png" alt="Biryani &amp; Chinese District Logo" class="header-brand-img" />
+        <div class="brand-text">
+          <span class="brand-title">Biryani &amp; Chinese</span>
+          <span class="brand-subtitle">District</span>
+        </div>
+      </a>
+
+      <!-- Location Pill -->
+      <button class="header-location-pill" id="header-location-pill" title="Meherma Barahat Pirpanti Road, Near Purana Naaz Cinema Hall">
+        <svg class="header-location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span class="location-text">Meherma, Near Naaz Cinema</span>
+        <svg class="location-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+    </div>
+
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li><a href="#hero-scroll-wrapper" class="nav-link">Experience</a></li>
+        <li><a href="#menu-section" class="nav-link active">Menu</a></li>
+        <li><a href="#menu-promo-section" class="nav-link">Offers</a></li>
+        <li><a href="#header-location-pill" class="nav-link">Visit Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <!-- Header Cart Trigger Button -->
+      <button class="header-cart-btn" id="header-cart-btn" aria-label="View Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="header-cart-badge" id="header-cart-badge">0</span>
+      </button>
+
+      <a href="#menu-section" class="header-cta" id="header-reserve-btn">Order Now &rarr;</a>
+    </div>
+
+    <!-- Scroll progress indicator -->
+    <div class="header-progress-bar" id="header-progress-bar"></div>
+  </header>
+
+  <!-- Main Cinematic Hero Section -->
+  <main>
+    <div class="hero-scroll-wrapper" id="hero-scroll-wrapper">
+      <div class="hero-pinned-viewport" id="hero-pinned-viewport">
+        
+        <!-- Canvas for WebP Frame Sequence -->
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
+
+        <!-- Ambient Cinematic Vignette -->
+        <div class="hero-vignette"></div>
+
+        <!-- HTML / CSS Text Overlay System -->
+        <div class="hero-text-overlay" id="hero-text-overlay">
+
+          <!-- ==========================================
+               PHASE 1: THE AROMA STARTS THE JOURNEY
+               Desktop: WhatsApp Image 2026-09-18 at 5.39.51 PM
+               Mobile: Panel 2 (AROMA)
+               ========================================== -->
+          <div class="hero-stage" id="stage-1" data-align="center">
+            <div class="stage-content stage-1-content">
+              
+              <!-- Desktop Version of Stage 1 -->
+              <div class="desktop-only-block stage-1-desktop">
+                <!-- Chef Hat Icon -->
+                <svg class="chef-hat-icon" viewBox="0 0 54 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 32 C9 30, 6 24, 8 18 C10 12, 17 10, 20 13 C22 6, 32 6, 34 13 C37 10, 44 12, 46 18 C48 24, 45 30, 40 32" />
+                  <path d="M23 15 V 30" />
+                  <path d="M31 15 V 30" />
+                  <ellipse cx="27" cy="38" rx="14" ry="4" />
+                </svg>
+
+                <!-- THE AROMA with flanking lines -->
+                <div class="headline-flanked-wrapper">
+                  <span class="flank-line flank-left"></span>
+                  <h1 class="ref1-headline">THE AROMA</h1>
+                  <span class="flank-line flank-right"></span>
+                </div>
+
+                <p class="ref1-subtitle">STARTS THE JOURNEY</p>
+
+                <!-- Divider ornament: concentric ring with center dot -->
+                <div class="divider-ornament">
+                  <span class="divider-line flank-left"></span>
+                  <span class="divider-bullseye">
+                    <span class="inner-dot"></span>
+                  </span>
+                  <span class="divider-line flank-right"></span>
+                </div>
+              </div>
+
+              <!-- Mobile Version of Stage 1 (Panel 2 in storyboard) -->
+              <div class="mobile-only-block stage-1-mobile">
+                <div class="eyebrow-wrapper">
+                  <span class="eyebrow-line flank-left"></span>
+                  <span class="eyebrow-text">THE AROMA</span>
+                  <span class="eyebrow-line flank-right"></span>
+                </div>
+
+                <h1 class="mobile-stacked-headline">
+                  <span>STARTS</span>
+                  <span>THE JOURNEY</span>
+                </h1>
+
+                <div class="divider-ornament">
+                  <span class="divider-line flank-left"></span>
+                  <span class="divider-dot"></span>
+                  <span class="divider-line flank-right"></span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ==========================================
+               PHASE 2: AROMATIC. AUTHENTIC. UNFORGETTABLE.
+               Desktop: WhatsApp Image 2026-09-18 at 5.39.59 PM
+               Mobile: Panel 3 (AUTHENTIC)
+               ========================================== -->
+          <div class="hero-stage" id="stage-2" data-align="center">
+            <div class="stage-content stage-2-content">
+              
+              <!-- Desktop Version -->
+              <div class="desktop-only-block stage-2-desktop">
+                <svg class="chef-hat-icon" viewBox="0 0 54 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 32 C9 30, 6 24, 8 18 C10 12, 17 10, 20 13 C22 6, 32 6, 34 13 C37 10, 44 12, 46 18 C48 24, 45 30, 40 32" />
+                  <path d="M23 15 V 30" />
+                  <path d="M31 15 V 30" />
+                  <ellipse cx="27" cy="38" rx="14" ry="4" />
+                </svg>
+
+                <div class="eyebrow-wrapper">
+                  <span class="eyebrow-line flank-left"></span>
+                  <span class="eyebrow-text">AUTHENTIC CUISINE</span>
+                  <span class="eyebrow-line flank-right"></span>
+                </div>
+
+                <h2 class="ref2-headline">Aromatic. Authentic. Unforgettable.</h2>
+                
+                <div class="ref2-sub-row">
+                  <span class="sub-flank-line flank-left"></span>
+                  <span class="sub-text">Freshly prepared</span>
+                  <!-- Exact tilted gold leaf icon -->
+                  <svg class="gold-leaf-icon" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 19 C7 15, 11 9, 19 5 C19 13, 13 17, 9 19 Z" fill="#e5c183"/>
+                    <path d="M5 19 L15 9" stroke="#996a26" stroke-width="1.2" stroke-linecap="round"/>
+                  </svg>
+                  <span class="sub-text">Richly flavoured</span>
+                  <span class="sub-flank-line flank-right"></span>
+                </div>
+              </div>
+
+              <!-- Mobile Version (Panel 3) -->
+              <div class="mobile-only-block stage-2-mobile">
+                <h2 class="mobile-three-line-serif">
+                  <span>AROMATIC.</span>
+                  <span>AUTHENTIC.</span>
+                  <span>UNFORGETTABLE.</span>
+                </h2>
+
+                <p class="mobile-sub-italic">
+                  Freshly prepared • Richly flavoured
+                </p>
+
+                <div class="divider-ornament">
+                  <span class="divider-line flank-left"></span>
+                  <span class="divider-dot"></span>
+                  <span class="divider-line flank-right"></span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ==========================================
+               PHASE 3: FROM THE FIRST AROMA
+               Desktop: WhatsApp Image 2026-09-18 at 5.40.10 PM
+               Mobile: Panel 4 (JOURNEY)
+               ========================================== -->
+          <div class="hero-stage" id="stage-3" data-align="left">
+            <div class="stage-content stage-3-content">
+              
+              <!-- Desktop Version -->
+              <div class="desktop-only-block stage-3-desktop">
+                <svg class="chef-hat-icon" viewBox="0 0 54 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 32 C9 30, 6 24, 8 18 C10 12, 17 10, 20 13 C22 6, 32 6, 34 13 C37 10, 44 12, 46 18 C48 24, 45 30, 40 32" />
+                  <path d="M23 15 V 30" />
+                  <path d="M31 15 V 30" />
+                  <ellipse cx="27" cy="38" rx="14" ry="4" />
+                </svg>
+
+                <div class="eyebrow-wrapper">
+                  <span class="eyebrow-line flank-left"></span>
+                  <span class="eyebrow-text">A JOURNEY OF FLAVOURS</span>
+                  <span class="eyebrow-line flank-right"></span>
+                </div>
+
+                <div class="ref3-lead">FROM THE FIRST</div>
+                <h2 class="ref3-aroma-glow">AROMA</h2>
+                <p class="ref3-lastbite">to the very last bite.</p>
+
+                <div class="divider-ornament">
+                  <span class="divider-line flank-left"></span>
+                  <span class="divider-bullseye">
+                    <span class="inner-dot"></span>
+                  </span>
+                  <span class="divider-line flank-right"></span>
+                </div>
+              </div>
+
+              <!-- Mobile Version (Panel 4) -->
+              <div class="mobile-only-block stage-3-mobile">
+                <div class="mobile-eyebrow-simple">FROM THE</div>
+                <h2 class="mobile-aroma-gold">FIRST AROMA</h2>
+                <p class="mobile-sub-italic">to the very last bite.</p>
+
+                <div class="divider-ornament">
+                  <span class="divider-line flank-left"></span>
+                  <span class="divider-dot"></span>
+                  <span class="divider-line flank-right"></span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ==========================================
+               PHASE 4: BIRYANI & CHINESE
+               Desktop: WhatsApp Image 2026-09-18 at 5.40.17 PM
+               Mobile: Panel 5 (CUISINE)
+               ========================================== -->
+          <div class="hero-stage" id="stage-4" data-align="left">
+            <div class="stage-content stage-4-content">
+              
+              <!-- Desktop Version -->
+              <div class="desktop-only-block stage-4-desktop">
+                <svg class="chef-hat-icon" viewBox="0 0 54 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 32 C9 30, 6 24, 8 18 C10 12, 17 10, 20 13 C22 6, 32 6, 34 13 C37 10, 44 12, 46 18 C48 24, 45 30, 40 32" />
+                  <path d="M23 15 V 30" />
+                  <path d="M31 15 V 30" />
+                  <ellipse cx="27" cy="38" rx="14" ry="4" />
+                </svg>
+
+                <div class="eyebrow-wrapper">
+                  <span class="eyebrow-line flank-left"></span>
+                  <span class="eyebrow-text">OUR SIGNATURE CUISINE</span>
+                  <span class="eyebrow-line flank-right"></span>
+                </div>
+
+                <h2 class="ref4-headline">
+                  <span class="gold-text">BIRYANI</span>
+                  <span class="cream-text">&amp; CHINESE</span>
+                </h2>
+                
+                <p class="ref4-subtitle">Made for moments worth remembering.</p>
+
+                <div class="divider-ornament">
+                  <span class="divider-line flank-left"></span>
+                  <span class="divider-bullseye">
+                    <span class="inner-dot"></span>
+                  </span>
+                  <span class="divider-line flank-right"></span>
+                </div>
+              </div>
+
+              <!-- Mobile Version (Panel 5) -->
+              <div class="mobile-only-block stage-4-mobile">
+                <h2 class="mobile-biryani-chinese">
+                  <span>BIRYANI &amp;</span>
+                  <span>CHINESE</span>
+                </h2>
+
+                <p class="mobile-moments-italic">
+                  <span>Made for moments</span>
+                  <span>worth remembering.</span>
+                </p>
+
+                <div class="divider-ornament">
+                  <span class="divider-line flank-left"></span>
+                  <span class="divider-dot"></span>
+                  <span class="divider-line flank-right"></span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ==========================================
+               PHASE 5: FINAL HERO (It's not just Food, It's an Experience.)
+               Desktop: WhatsApp Image 2026-09-18 at 5.40.27 PM
+               Mobile: Panel 6 (FINAL HERO)
+               ========================================== -->
+          <div class="hero-stage" id="stage-5" data-align="left">
+            <div class="stage-content stage-5-content">
+              
+              <!-- Desktop Version -->
+              <div class="desktop-only-block stage-5-desktop">
+                <svg class="chef-hat-icon" viewBox="0 0 54 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 32 C9 30, 6 24, 8 18 C10 12, 17 10, 20 13 C22 6, 32 6, 34 13 C37 10, 44 12, 46 18 C48 24, 45 30, 40 32" />
+                  <path d="M23 15 V 30" />
+                  <path d="M31 15 V 30" />
+                  <ellipse cx="27" cy="38" rx="14" ry="4" />
+                </svg>
+
+                <div class="eyebrow-wrapper">
+                  <span class="eyebrow-line flank-left"></span>
+                  <span class="eyebrow-text">A TASTE BEYOND ORDINARY</span>
+                  <span class="eyebrow-line flank-right"></span>
+                </div>
+
+                <h2 class="ref5-headline">
+                  <span class="headline-l1">It's not just</span>
+                  <span class="headline-l2">Food, It's an</span>
+                  <span class="headline-l3 experience-gold">Experience.</span>
+                </h2>
+
+                <div class="divider-ornament">
+                  <span class="divider-line flank-left"></span>
+                  <span class="divider-bullseye">
+                    <span class="inner-dot"></span>
+                  </span>
+                  <span class="divider-line flank-right"></span>
+                </div>
+
+                <p class="ref5-desc">
+                  From aromatic biryanis to irresistible Chinese flavors,<br />
+                  we bring you a perfect blend of taste, quality and<br />
+                  happiness in every bite.
+                </p>
+
+                <div class="ref5-cta-group">
+                  <a href="#menu" class="btn-primary-explore-exact" id="explore-menu-btn">
+                    <span>EXPLORE MENU</span>
+                    <span class="btn-arrow">&rarr;</span>
+                  </a>
+                  <a href="#categories" class="btn-secondary-categories-exact" id="view-categories-btn">
+                    VIEW CATEGORIES
+                  </a>
+                </div>
+              </div>
+
+              <!-- Mobile Version (Panel 6) -->
+              <div class="mobile-only-block stage-5-mobile">
+                <h2 class="mobile-experience-headline">
+                  <span>It's not just</span>
+                  <span>Food, It's an</span>
+                  <span class="gold-experience">Experience.</span>
+                </h2>
+
+                <div class="divider-ornament">
+                  <span class="divider-line flank-left"></span>
+                  <span class="divider-dot"></span>
+                  <span class="divider-line flank-right"></span>
+                </div>
+
+                <p class="mobile-desc-copy">
+                  From aromatic biryanis to irresistible Chinese flavors, we bring you a perfect blend of taste, quality and happiness in every bite.
+                </p>
+
+                <div class="mobile-cta-column">
+                  <a href="#menu" class="btn-primary-explore-exact" id="mobile-explore-menu-btn">
+                    <span>EXPLORE MENU</span>
+                    <span class="btn-arrow">&rarr;</span>
+                  </a>
+                  <a href="#categories" class="btn-secondary-categories-exact" id="mobile-view-categories-btn">
+                    VIEW CATEGORIES
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div><!-- /.hero-text-overlay -->
+
+      </div><!-- /.hero-pinned-viewport -->
+    </div><!-- /.hero-scroll-wrapper -->
+
+    <!-- ==========================================================================
+         MENU SECTION (Visual Source of Truth: desktop_menu_reference & mobile_menu_reference)
+         ========================================================================== -->
+    <section class="menu-section" id="menu-section" aria-label="Our Authentic Culinary Menu">
+      
+      <!-- Menu Hero Banner -->
+      <div class="menu-hero-banner" id="menu-hero-banner">
+        <div class="menu-hero-left">
+          <h1 class="menu-hero-title">MENU</h1>
+          <span class="menu-hero-subtitle">CRAFTED WITH HERITAGE &amp; PASSION</span>
+        </div>
+
+        <div class="menu-hero-right">
+          <div class="menu-calligraphy-quote">
+            <span>"Same Taste</span>
+            <span>Bigger Stories"</span>
+          </div>
+          <img 
+            src="/menu_assets/menu_header_biryani.png" 
+            alt="Royal Biryani Dish" 
+            class="menu-hero-dish-img" 
+            loading="lazy" 
+          />
+        </div>
+      </div>
+
+      <!-- Sticky Category Filter Navigation Bar -->
+      <nav class="menu-category-section" id="menu-category-section" aria-label="Menu Categories">
+        <div class="menu-categories-wrapper" id="menu-categories-list">
+          <!-- Dynamically injected by MenuController with ALL as first item -->
+        </div>
+      </nav>
+
+      <!-- Menu Section Header & Controls (Live Search, Sort, Item Count) -->
+      <div class="menu-controls-bar">
+        <div class="menu-controls-left">
+          <h2 class="menu-section-title">Our Menu</h2>
+          <span class="menu-section-subtitle" id="menu-count-label">Handcrafted delicacies prepared fresh daily</span>
+        </div>
+
+        <div class="menu-controls-right">
+          <!-- Live Search Bar -->
+          <div class="menu-search-wrapper">
+            <svg class="menu-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input 
+              type="text" 
+              id="menu-search-input" 
+              class="menu-search-input" 
+              placeholder="Search for delicious dishes..." 
+              autocomplete="off" 
+            />
+          </div>
+
+          <!-- Sort Select -->
+          <div class="menu-sort-wrapper">
+            <select id="menu-sort-select" class="menu-sort-select" aria-label="Sort Menu Items">
+              <option value="popularity">Sort by: Popularity</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+            </select>
+            <svg class="menu-sort-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Food Card Grid -->
+      <div class="menu-grid-container">
+        <div class="menu-food-grid" id="menu-food-grid">
+          <!-- Food cards populated by MenuController -->
+        </div>
+      </div>
+
+      <!-- Promotional Banners Row (Desktop) -->
+      <section class="menu-promo-section" id="menu-promo-section" aria-label="Exclusive Specials">
+        <div class="promo-cards-row">
+          <div class="promo-banner-card" style="background-image: url('/menu_assets/banners/combos.png');">
+            <div class="promo-overlay"></div>
+            <div class="promo-content">
+              <span class="promo-tagline">Chef's Curated</span>
+              <h3 class="promo-title">Royal Feasts &amp; Combos</h3>
+              <a href="#menu-section" class="promo-action-btn" data-target-cat="combos">
+                <span>Explore Combos</span>
+                <span class="btn-arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="promo-banner-card" style="background-image: url('/menu_assets/banners/chinese_specials.png');">
+            <div class="promo-overlay"></div>
+            <div class="promo-content">
+              <span class="promo-tagline">Wok Tossed</span>
+              <h3 class="promo-title">Sizzling Chinese Specials</h3>
+              <a href="#menu-section" class="promo-action-btn" data-target-cat="chinese">
+                <span>View Wok Dishes</span>
+                <span class="btn-arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="promo-banner-card" style="background-image: url('/menu_assets/banners/sweet_endings.png');">
+            <div class="promo-overlay"></div>
+            <div class="promo-content">
+              <span class="promo-tagline">Desserts &amp; Shakes</span>
+              <h3 class="promo-title">Sweet Endings</h3>
+              <a href="#menu-section" class="promo-action-btn" data-target-cat="desserts">
+                <span>View Desserts</span>
+                <span class="btn-arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section><!-- /.menu-section -->
+
+    <!-- ==========================================================================
+         STICKY BOTTOM CART BAR
+         ========================================================================== -->
+    <aside class="sticky-cart-bar" id="sticky-cart-bar" aria-label="Sticky Cart Summary">
+      <div class="sticky-cart-left">
+        <img src="/menu_assets/cart_thumb.png" alt="Cart Food Item" class="sticky-cart-thumb" />
+        <div class="sticky-cart-info">
+          <span class="sticky-cart-count" id="sticky-cart-count">0 items added</span>
+          <span class="sticky-cart-total" id="sticky-cart-total">&#8377;0</span>
+        </div>
+      </div>
+      <button class="btn-sticky-view-cart trigger-view-cart" id="sticky-view-cart-btn">
+        <span>View Cart</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </aside>
+
+    <!-- ==========================================================================
+         SLIDE-OUT CART DRAWER & BACKDROP
+         ========================================================================== -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Cart">
+      <div class="cart-drawer-header">
+        <h2 class="cart-drawer-title">Your Order</h2>
+        <button class="close-cart-drawer" id="close-cart-drawer" aria-label="Close Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="cart-drawer-body" id="cart-drawer-items">
+        <!-- Injected dynamically by CartController -->
+      </div>
+
+      <div class="cart-drawer-footer">
+        <div class="cart-summary-row">
+          <span>Item Total</span>
+          <span id="cart-drawer-subtotal">&#8377;0</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Delivery Fee &amp; Taxes</span>
+          <span style="color: #2ecc71;">FREE</span>
+        </div>
+        <div class="cart-summary-row total-row">
+          <span>To Pay</span>
+          <span id="cart-drawer-total">&#8377;0</span>
+        </div>
+        <button class="btn-cart-checkout" id="cart-checkout-btn">
+          Place Order &rarr;
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
