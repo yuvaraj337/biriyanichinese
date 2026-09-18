@@ -9,6 +9,7 @@ export class MenuController {
   constructor(cartController) {
     this.cart = cartController;
     this.activeCategory = 'all';
+    this.activeDietaryFilter = 'all'; // 'all', 'veg', 'non-veg'
     this.searchQuery = '';
     this.activeSort = 'popularity';
     this.selectedVariants = new Map(); // itemId -> selectedVariantObject
@@ -19,6 +20,8 @@ export class MenuController {
     this.searchInput = document.getElementById('menu-search-input');
     this.sortSelect = document.getElementById('menu-sort-select');
     this.menuCountLabel = document.getElementById('menu-count-label');
+    this.filterVegBtn = document.getElementById('filter-veg-btn');
+    this.filterNonVegBtn = document.getElementById('filter-nonveg-btn');
 
     this.init();
   }
@@ -55,10 +58,52 @@ export class MenuController {
       });
     }
 
+    // Header Search Button
+    const headerSearchBtn = document.getElementById('header-search-btn');
+    if (headerSearchBtn) {
+      headerSearchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const searchInput = document.getElementById('menu-search-input');
+        if (searchInput) {
+          searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          setTimeout(() => searchInput.focus(), 400);
+        }
+      });
+    }
+
     // Sort Dropdown
     if (this.sortSelect) {
       this.sortSelect.addEventListener('change', (e) => {
         this.activeSort = e.target.value;
+        this.renderDishes();
+      });
+    }
+
+    // Direct Veg / Non-Veg Filter Buttons
+    if (this.filterVegBtn) {
+      this.filterVegBtn.addEventListener('click', () => {
+        if (this.activeDietaryFilter === 'veg') {
+          this.activeDietaryFilter = 'all';
+          this.filterVegBtn.classList.remove('is-active-veg');
+        } else {
+          this.activeDietaryFilter = 'veg';
+          this.filterVegBtn.classList.add('is-active-veg');
+          if (this.filterNonVegBtn) this.filterNonVegBtn.classList.remove('is-active-nonveg');
+        }
+        this.renderDishes();
+      });
+    }
+
+    if (this.filterNonVegBtn) {
+      this.filterNonVegBtn.addEventListener('click', () => {
+        if (this.activeDietaryFilter === 'non-veg') {
+          this.activeDietaryFilter = 'all';
+          this.filterNonVegBtn.classList.remove('is-active-nonveg');
+        } else {
+          this.activeDietaryFilter = 'non-veg';
+          this.filterNonVegBtn.classList.add('is-active-nonveg');
+          if (this.filterVegBtn) this.filterVegBtn.classList.remove('is-active-veg');
+        }
         this.renderDishes();
       });
     }
@@ -72,7 +117,7 @@ export class MenuController {
       });
     }
 
-    // Promo banner clicks
+    // Promo & Special banner clicks
     document.querySelectorAll('.promo-action-btn').forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -147,7 +192,11 @@ export class MenuController {
       if (this.activeCategory !== 'all' && item.category !== this.activeCategory) {
         return false;
       }
-      // 2. Search Filter
+      // 2. Dietary Filter (Direct Veg / Non-Veg)
+      if (this.activeDietaryFilter !== 'all' && item.dietary !== this.activeDietaryFilter) {
+        return false;
+      }
+      // 3. Search Filter
       if (this.searchQuery) {
         const matchesName = item.name.toLowerCase().includes(this.searchQuery);
         const matchesDesc = item.description.toLowerCase().includes(this.searchQuery);
@@ -159,10 +208,10 @@ export class MenuController {
       return true;
     });
 
-    // 3. Sorting
-    if (this.activeSort === 'price-low-high') {
+    // 4. Sorting
+    if (this.activeSort === 'price-low-high' || this.activeSort === 'price-asc') {
       list.sort((a, b) => a.defaultPrice - b.defaultPrice);
-    } else if (this.activeSort === 'price-high-low') {
+    } else if (this.activeSort === 'price-high-low' || this.activeSort === 'price-desc') {
       list.sort((a, b) => b.defaultPrice - a.defaultPrice);
     } else if (this.activeSort === 'rating') {
       list.sort((a, b) => b.rating - a.rating);
@@ -191,7 +240,7 @@ export class MenuController {
             <line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
           <p class="empty-title">No matching dishes found</p>
-          <p class="empty-desc">Try searching for "biryani", "chicken", or selecting "All".</p>
+          <p class="empty-desc">Try searching for "biryani", "chicken", or clearing filters.</p>
         </div>
       `;
       return;
@@ -256,13 +305,12 @@ export class MenuController {
               <div class="card-action-container" id="action-container-${item.id}">
                 ${currentQty > 0 ? `
                   <div class="card-stepper">
-                    <button class="card-step-btn btn-card-dec" data-id="${item.id}" data-var="${currentVariantLabel}">−</button>
+                    <button class="card-step-btn btn-card-dec" data-id="${item.id}" data-var="${currentVariantLabel}" aria-label="Decrease quantity">−</button>
                     <span class="card-step-qty">${currentQty}</span>
-                    <button class="card-step-btn btn-card-inc" data-id="${item.id}" data-var="${currentVariantLabel}">+</button>
+                    <button class="card-step-btn btn-card-inc" data-id="${item.id}" data-var="${currentVariantLabel}" aria-label="Increase quantity">+</button>
                   </div>
                 ` : `
-                  <button class="btn-card-add" data-id="${item.id}">
-                    <span>Add</span>
+                  <button class="btn-card-add" data-id="${item.id}" aria-label="Add ${item.name} to order">
                     <span class="plus-icon">+</span>
                   </button>
                 `}
@@ -366,9 +414,9 @@ export class MenuController {
     if (currentQty > 0) {
       actionContainer.innerHTML = `
         <div class="card-stepper">
-          <button class="card-step-btn btn-card-dec" data-id="${item.id}" data-var="${currentVariantLabel}">−</button>
+          <button class="card-step-btn btn-card-dec" data-id="${item.id}" data-var="${currentVariantLabel}" aria-label="Decrease quantity">−</button>
           <span class="card-step-qty">${currentQty}</span>
-          <button class="card-step-btn btn-card-inc" data-id="${item.id}" data-var="${currentVariantLabel}">+</button>
+          <button class="card-step-btn btn-card-inc" data-id="${item.id}" data-var="${currentVariantLabel}" aria-label="Increase quantity">+</button>
         </div>
       `;
 
@@ -382,8 +430,7 @@ export class MenuController {
       });
     } else {
       actionContainer.innerHTML = `
-        <button class="btn-card-add" data-id="${item.id}">
-          <span>Add</span>
+        <button class="btn-card-add" data-id="${item.id}" aria-label="Add ${item.name} to order">
           <span class="plus-icon">+</span>
         </button>
       `;

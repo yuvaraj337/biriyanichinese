@@ -7,10 +7,10 @@
   <title>Biryani &amp; Chinese District | A Taste Beyond Ordinary</title>
   <meta name="description" content="Experience the authentic flavours of royal biryanis and signature Chinese dishes at Biryani &amp; Chinese District. A journey of aromas, heritage, and culinary artistry." />
   
-  <!-- Google Fonts: Playfair Display, Cinzel, and Montserrat -->
+  <!-- Google Fonts: Playfair Display, Cinzel, Montserrat, and Caveat / Alex Brush -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Caveat:wght@500;600;700&family=Cinzel:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/src/styles/hero.css" />
   <link rel="stylesheet" href="/src/styles/menu.css" />
@@ -24,8 +24,9 @@
       <a href="#" class="brand-logo" aria-label="Biryani &amp; Chinese District Home">
         <img src="/menu_assets/restaurant_logo.png" alt="Biryani &amp; Chinese District Logo" class="header-brand-img" />
         <div class="brand-text">
-          <span class="brand-title">Biryani &amp; Chinese</span>
-          <span class="brand-subtitle">District</span>
+          <span class="brand-title">BIRYANI &amp; CHINESE</span>
+          <span class="brand-subtitle">DISTRICT</span>
+          <span class="brand-tagline">BIRYANI MEETS A BIGGER WORLD</span>
         </div>
       </a>
 
@@ -35,7 +36,7 @@
           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
           <circle cx="12" cy="10" r="3"></circle>
         </svg>
-        <span class="location-text">Meherma, Near Naaz Cinema</span>
+        <span class="location-text">Meherma</span>
         <svg class="location-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
           <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
@@ -46,13 +47,21 @@
       <ul class="nav-links">
         <li><a href="#hero-scroll-wrapper" class="nav-link">Home</a></li>
         <li><a href="#menu-section" class="nav-link">Menu</a></li>
-        <li><a href="#reservation-section" class="nav-link active">Our Story</a></li>
-        <li><a href="#reservation-section" class="nav-link">Outlets</a></li>
+        <li><a href="#specials-section" class="nav-link">Specials</a></li>
+        <li><a href="#reservation-section" class="nav-link">Reserve Table</a></li>
         <li><a href="#header-location-pill" class="nav-link">Contact</a></li>
       </ul>
     </nav>
 
     <div class="nav-actions">
+      <!-- Search Trigger Icon -->
+      <button class="header-search-btn" id="header-search-btn" aria-label="Search Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+
       <!-- Header Cart Trigger Button -->
       <button class="header-cart-btn" id="header-cart-btn" aria-label="View Cart">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -61,6 +70,15 @@
           <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
         </svg>
         <span class="header-cart-badge" id="header-cart-badge">0</span>
+      </button>
+
+      <!-- Mobile Hamburger Icon -->
+      <button class="header-menu-btn" id="header-menu-btn" aria-label="Toggle Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
       </button>
 
       <a href="#reservation-section" class="header-cta" id="header-reserve-btn" data-open-reservation>Reserve Table</a>
@@ -412,7 +430,7 @@
     </div><!-- /.hero-scroll-wrapper -->
 
     <!-- ==========================================================================
-         MENU SECTION (Visual Source of Truth: desktop_menu_reference & mobile_menu_reference)
+         MENU SECTION (Visual Source of Truth: Reference Image 1)
          ========================================================================== -->
     <section class="menu-section" id="menu-section" aria-label="Our Authentic Culinary Menu">
       
@@ -420,13 +438,15 @@
       <div class="menu-hero-banner" id="menu-hero-banner">
         <div class="menu-hero-left">
           <h1 class="menu-hero-title">MENU</h1>
-          <span class="menu-hero-subtitle">CRAFTED WITH HERITAGE &amp; PASSION</span>
+          <span class="menu-hero-subtitle">GREAT FOOD &bull; BOLDER FLAVOURS &bull; ALWAYS HERE</span>
         </div>
 
         <div class="menu-hero-right">
           <div class="menu-calligraphy-quote">
-            <span>"Same Taste</span>
-            <span>Bigger Stories"</span>
+            <span class="script-line-1">Same</span>
+            <span class="script-line-2">Taste</span>
+            <span class="script-line-3">Bigger</span>
+            <span class="script-line-4">Stories</span>
           </div>
           <img 
             src="/menu_assets/menu_header_biryani.png" 
@@ -437,21 +457,33 @@
         </div>
       </div>
 
-      <!-- Sticky Category Filter Navigation Bar -->
+      <!-- Horizontal Category Carousel -->
       <nav class="menu-category-section" id="menu-category-section" aria-label="Menu Categories">
         <div class="menu-categories-wrapper" id="menu-categories-list">
           <!-- Dynamically injected by MenuController with ALL as first item -->
         </div>
       </nav>
 
-      <!-- Menu Section Header & Controls (Live Search, Sort, Item Count) -->
+      <!-- Our Menu Header & Direct Dietary Filters -->
       <div class="menu-controls-bar">
         <div class="menu-controls-left">
           <h2 class="menu-section-title">Our Menu</h2>
-          <span class="menu-section-subtitle" id="menu-count-label">Handcrafted delicacies prepared fresh daily</span>
+          <span class="menu-section-subtitle" id="menu-count-label">Authentic flavours, made with love.</span>
         </div>
 
         <div class="menu-controls-right">
+          <!-- Direct Veg / Non-Veg Filters (Visible on all screens) -->
+          <div class="dietary-filter-group" id="dietary-filter-group">
+            <button class="btn-diet-filter btn-diet-veg" data-diet="veg" id="filter-veg-btn" aria-label="Filter Vegetarian items">
+              <span class="diet-filter-icon">🌿</span>
+              <span>Veg</span>
+            </button>
+            <button class="btn-diet-filter btn-diet-nonveg" data-diet="non-veg" id="filter-nonveg-btn" aria-label="Filter Non-Vegetarian items">
+              <span class="diet-filter-icon">🍗</span>
+              <span>Non-Veg</span>
+            </button>
+          </div>
+
           <!-- Live Search Bar -->
           <div class="menu-search-wrapper">
             <svg class="menu-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -462,7 +494,7 @@
               type="text" 
               id="menu-search-input" 
               class="menu-search-input" 
-              placeholder="Search for delicious dishes..." 
+              placeholder="Search dishes..." 
               autocomplete="off" 
             />
           </div>
@@ -482,55 +514,184 @@
         </div>
       </div>
 
-      <!-- Food Card Grid -->
+      <!-- Food Card Grid (2 cards per row on mobile) -->
       <div class="menu-grid-container">
         <div class="menu-food-grid" id="menu-food-grid">
           <!-- Food cards populated by MenuController -->
         </div>
       </div>
 
-      <!-- Promotional Banners Row (Desktop) -->
-      <section class="menu-promo-section" id="menu-promo-section" aria-label="Exclusive Specials">
-        <div class="promo-cards-row">
-          <div class="promo-banner-card" style="background-image: url('/menu_assets/banners/combos.png');">
-            <div class="promo-overlay"></div>
-            <div class="promo-content">
-              <span class="promo-tagline">Chef's Curated</span>
-              <h3 class="promo-title">Royal Feasts &amp; Combos</h3>
-              <a href="#menu-section" class="promo-action-btn" data-target-cat="combos">
-                <span>Explore Combos</span>
-                <span class="btn-arrow">&rarr;</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="promo-banner-card" style="background-image: url('/menu_assets/banners/chinese_specials.png');">
-            <div class="promo-overlay"></div>
-            <div class="promo-content">
-              <span class="promo-tagline">Wok Tossed</span>
-              <h3 class="promo-title">Sizzling Chinese Specials</h3>
-              <a href="#menu-section" class="promo-action-btn" data-target-cat="chinese">
-                <span>View Wok Dishes</span>
-                <span class="btn-arrow">&rarr;</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="promo-banner-card" style="background-image: url('/menu_assets/banners/sweet_endings.png');">
-            <div class="promo-overlay"></div>
-            <div class="promo-content">
-              <span class="promo-tagline">Desserts &amp; Shakes</span>
-              <h3 class="promo-title">Sweet Endings</h3>
-              <a href="#menu-section" class="promo-action-btn" data-target-cat="desserts">
-                <span>View Desserts</span>
-                <span class="btn-arrow">&rarr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
     </section><!-- /.menu-section -->
+
+    <!-- ==========================================================================
+         COMBO / SPECIALS SECTION (Visual Source of Truth: Reference Image 2)
+         ========================================================================== -->
+    <section class="specials-section" id="specials-section" aria-label="Chef's Specials and Combos">
+      
+      <!-- Specials Header -->
+      <div class="specials-header-container">
+        <div class="specials-header-left">
+          <div class="specials-eyebrow">
+            <span class="flank-line"></span>
+            <span class="specials-eyebrow-text">EXPLORE OUR SPECIALS</span>
+            <span class="flank-line"></span>
+          </div>
+          <h2 class="specials-main-title">
+            <span>Something Special</span>
+            <span>For Every Craving</span>
+          </h2>
+          <p class="specials-subtitle">
+            From royal biryanis to sizzling chinese, we've got it all.
+          </p>
+        </div>
+
+        <div class="specials-calligraphy-accent">
+          <span class="script-word">Good</span>
+          <span class="script-word">Food</span>
+          <span class="script-word">Happier</span>
+          <span class="script-word">People</span>
+        </div>
+      </div>
+
+      <!-- Three Large Specials Cards (Stacked on Mobile, 3 columns on Desktop) -->
+      <div class="specials-cards-grid">
+        
+        <!-- CARD 1: ROYAL FEASTS & COMBOS -->
+        <article class="special-card-item card-royal-combos" id="special-card-1">
+          <div class="special-card-bg" style="background-image: url('/menu_assets/banners/royal_combos.jpg');"></div>
+          <div class="special-card-overlay"></div>
+          
+          <div class="special-card-topbar">
+            <span class="special-tag-label">CHEF'S CURATED</span>
+            <div class="special-badge-pill">
+              <svg class="badge-icon-crown" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+              </svg>
+              <span>ROYAL FLAVOURS</span>
+            </div>
+          </div>
+
+          <div class="special-card-content">
+            <h3 class="special-card-title">
+              <span>ROYAL</span>
+              <span>FEASTS &amp;</span>
+              <span>COMBOS</span>
+            </h3>
+            <p class="special-card-desc">
+              Perfectly paired for a greater experience.
+            </p>
+
+            <div class="special-card-action-row">
+              <a href="#menu-section" class="btn-special-cta promo-action-btn" data-target-cat="combos">
+                <span>Explore Combos</span>
+                <span class="cta-arrow">&rarr;</span>
+              </a>
+              <a href="#menu-section" class="btn-special-circle-arrow promo-action-btn" data-target-cat="combos" aria-label="Explore Combos">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 2: SIZZLING CHINESE SPECIALS -->
+        <article class="special-card-item card-sizzling-chinese" id="special-card-2">
+          <div class="special-card-bg" style="background-image: url('/menu_assets/banners/sizzling_chinese.jpg');"></div>
+          <div class="special-card-overlay"></div>
+          
+          <div class="special-card-topbar">
+            <span class="special-tag-label">WOK TOSSED</span>
+            <div class="special-badge-pill">
+              <svg class="badge-icon-flame" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 23c-4.97 0-9-4.03-9-9 0-4.08 2.87-7.97 6.13-10.74a1.003 1.003 0 0 1 1.63.78v2.39c1.64-1.92 3.12-4.14 3.73-6.23.11-.38.54-.58.88-.41C18.42 2.66 21 7.28 21 14c0 4.97-4.03 9-9 9z"/>
+              </svg>
+              <span>FRESHLY WOK TOSSED</span>
+            </div>
+          </div>
+
+          <div class="special-card-content">
+            <h3 class="special-card-title">
+              <span>SIZZLING</span>
+              <span>CHINESE</span>
+              <span>SPECIALS</span>
+            </h3>
+            <p class="special-card-desc">
+              Bold flavours. Irresistible taste.
+            </p>
+
+            <div class="special-card-action-row">
+              <a href="#menu-section" class="btn-special-cta promo-action-btn" data-target-cat="chinese">
+                <span>View Wok Dishes</span>
+                <span class="cta-arrow">&rarr;</span>
+              </a>
+              <a href="#menu-section" class="btn-special-circle-arrow promo-action-btn" data-target-cat="chinese" aria-label="View Wok Dishes">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 3: SWEET ENDINGS -->
+        <article class="special-card-item card-sweet-endings" id="special-card-3">
+          <div class="special-card-bg" style="background-image: url('/menu_assets/banners/sweet_endings.jpg');"></div>
+          <div class="special-card-overlay"></div>
+          
+          <div class="special-card-topbar">
+            <span class="special-tag-label">DESSERTS &amp; SHAKES</span>
+            <div class="special-badge-pill">
+              <svg class="badge-icon-dessert" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2c-3.31 0-6 2.69-6 6 0 2.22 1.21 4.15 3 5.19V20a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-6.81c1.79-1.04 3-2.97 3-5.19 0-3.31-2.69-6-6-6z"/>
+              </svg>
+              <span>SWEET MOMENTS</span>
+            </div>
+          </div>
+
+          <div class="special-card-content">
+            <h3 class="special-card-title">
+              <span>SWEET</span>
+              <span>ENDINGS</span>
+            </h3>
+            <p class="special-card-desc">
+              Because every great meal deserves a perfect finish.
+            </p>
+
+            <div class="special-card-action-row">
+              <a href="#menu-section" class="btn-special-cta promo-action-btn" data-target-cat="desserts">
+                <span>View Desserts</span>
+                <span class="cta-arrow">&rarr;</span>
+              </a>
+              <a href="#menu-section" class="btn-special-circle-arrow promo-action-btn" data-target-cat="desserts" aria-label="View Desserts">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /.specials-cards-grid -->
+
+      <!-- Quote Bar Banner -->
+      <div class="specials-quote-bar">
+        <div class="quote-leaf-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M11 20A7 7 0 0 1 4 13a7 7 0 0 1 7-7c4 0 7 2.5 8 6a7 7 0 0 1-8 8z"/>
+            <path d="M11 20V6"/>
+          </svg>
+        </div>
+        <div class="quote-text-col">
+          <span class="quote-phrase">&ldquo;Great food brings people together&rdquo;</span>
+          <span class="quote-author">&mdash; BIRYANI &amp; CHINESE DISTRICT &mdash;</span>
+        </div>
+      </div>
+
+    </section><!-- /.specials-section -->
 
     <!-- ==========================================================================
          TABLE RESERVATION SECTION
