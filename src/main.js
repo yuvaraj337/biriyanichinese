@@ -147,8 +147,21 @@ class App {
       }
     };
 
+    const viewCategoriesBtn = document.getElementById('view-categories-btn');
+    const mobileViewCategoriesBtn = document.getElementById('mobile-view-categories-btn');
+    const categorySection = document.getElementById('menu-category-section') || document.getElementById('menu-section');
+
+    const smoothScrollToCategories = (e) => {
+      e.preventDefault();
+      if (categorySection) {
+        categorySection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
     if (exploreBtn) exploreBtn.addEventListener('click', smoothScrollToMenu);
     if (mobileExploreBtn) mobileExploreBtn.addEventListener('click', smoothScrollToMenu);
+    if (viewCategoriesBtn) viewCategoriesBtn.addEventListener('click', smoothScrollToCategories);
+    if (mobileViewCategoriesBtn) mobileViewCategoriesBtn.addEventListener('click', smoothScrollToCategories);
     if (reserveBtn) reserveBtn.addEventListener('click', smoothScrollToMenu);
   }
 }
