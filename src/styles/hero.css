@@ -708,16 +708,22 @@ html, body {
 
   .mobile-only-block {
     display: flex !important;
+    flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  /* Mobile text sits in upper atmospheric region above the food */
+  /* Per-stage vertical positioning matching storyboard panels */
   .hero-stage {
     align-items: flex-start;
     justify-content: center;
-    padding-top: 15vh;
   }
+
+  #stage-1 { padding-top: 21.5vh; }
+  #stage-2 { padding-top: 21.5vh; }
+  #stage-3 { padding-top: 20vh; }
+  #stage-4 { padding-top: 18vh; }
+  #stage-5 { padding-top: 7.5vh; }
 
   .stage-content {
     margin: 0 auto !important;
@@ -727,18 +733,63 @@ html, body {
     text-align: center;
   }
 
+  /* Mobile Divider Ornament: — • — */
+  .mobile-only-block .divider-ornament {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0.55rem auto;
+  }
+
+  .mobile-only-block .divider-line {
+    width: 34px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(241, 214, 159, 0.65), transparent);
+  }
+
+  .mobile-only-block .divider-dot {
+    width: 4.5px;
+    height: 4.5px;
+    border-radius: 50%;
+    background-color: var(--color-gold-bright);
+    box-shadow: 0 0 6px var(--color-gold-bright);
+  }
+
   /* Mobile Panel 2: AROMA */
+  .stage-1-mobile .eyebrow-wrapper {
+    gap: 0.8rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .stage-1-mobile .eyebrow-line {
+    width: 32px;
+    height: 1px;
+    background: rgba(241, 214, 159, 0.65);
+  }
+
+  .stage-1-mobile .eyebrow-text {
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    color: var(--color-gold-mid);
+    text-transform: uppercase;
+  }
+
   .mobile-stacked-headline {
     display: flex;
     flex-direction: column;
     font-family: var(--font-serif-headline);
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 6.8vw, 2.45rem);
     font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: 0.06em;
-    color: var(--color-gold-mid);
-    text-shadow: 0 0 30px rgba(243, 199, 119, 0.45);
-    margin: 0.4rem 0 0.8rem 0;
+    line-height: 1.14;
+    letter-spacing: 0.05em;
+    background: linear-gradient(180deg, #ffffff 0%, #fff5e0 25%, #f7cf82 65%, #c8933b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 25px rgba(243, 199, 119, 0.45));
+    margin: 0.35rem 0 0.55rem 0;
   }
 
   /* Mobile Panel 3: AUTHENTIC */
@@ -746,40 +797,46 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: var(--font-serif-headline);
-    font-size: 1.95rem;
+    font-size: clamp(1.75rem, 5.8vw, 2.15rem);
     font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: 0.05em;
-    color: var(--color-gold-mid);
-    text-shadow: 0 0 30px rgba(243, 199, 119, 0.45);
-    margin-bottom: 0.7rem;
+    line-height: 1.18;
+    letter-spacing: 0.04em;
+    background: linear-gradient(180deg, #ffffff 0%, #fff5e0 25%, #f7cf82 65%, #c8933b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 25px rgba(243, 199, 119, 0.45));
+    margin-bottom: 0.55rem;
   }
 
   .mobile-sub-italic {
     font-family: var(--font-serif-headline);
     font-style: italic;
-    font-size: 1.05rem;
-    color: var(--color-cream-ivory);
-    margin-bottom: 0.6rem;
+    font-size: clamp(0.92rem, 3.2vw, 1.1rem);
+    color: #fff8ee;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.55rem;
   }
 
   /* Mobile Panel 4: JOURNEY */
   .mobile-eyebrow-simple {
     font-family: var(--font-sans);
-    font-size: 0.85rem;
+    font-size: 0.74rem;
+    font-weight: 500;
     letter-spacing: 0.28em;
-    color: var(--color-text-muted);
+    color: var(--color-gold-mid);
     text-transform: uppercase;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
   }
 
   .mobile-aroma-gold {
     font-family: var(--font-serif-headline);
-    font-size: 2.4rem;
+    font-size: clamp(2.1rem, 7vw, 2.6rem);
     font-weight: 700;
     letter-spacing: 0.06em;
-    color: var(--color-gold-mid);
-    text-shadow: 0 0 30px rgba(243, 199, 119, 0.5);
+    background: linear-gradient(180deg, #ffffff 0%, #fff5e0 25%, #f7cf82 65%, #c8933b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 25px rgba(243, 199, 119, 0.45));
     margin-bottom: 0.4rem;
   }
 
@@ -788,13 +845,15 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: var(--font-serif-headline);
-    font-size: 2.2rem;
+    font-size: clamp(2.2rem, 7.2vw, 2.7rem);
     font-weight: 700;
-    line-height: 1.15;
+    line-height: 1.12;
     letter-spacing: 0.05em;
-    color: var(--color-gold-mid);
-    text-shadow: 0 0 30px rgba(243, 199, 119, 0.5);
-    margin-bottom: 0.6rem;
+    background: linear-gradient(180deg, #ffffff 0%, #fff5e0 25%, #f7cf82 65%, #c8933b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 25px rgba(243, 199, 119, 0.45));
+    margin-bottom: 0.55rem;
   }
 
   .mobile-moments-italic {
@@ -802,10 +861,10 @@ html, body {
     flex-direction: column;
     font-family: var(--font-serif-headline);
     font-style: italic;
-    font-size: 1.1rem;
-    color: var(--color-cream-ivory);
+    font-size: clamp(1.02rem, 3.5vw, 1.2rem);
+    color: #fff8ee;
     line-height: 1.25;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.55rem;
   }
 
   /* Mobile Panel 6: FINAL HERO */
@@ -813,47 +872,88 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: var(--font-serif-headline);
-    font-size: 2.25rem;
+    font-size: clamp(1.85rem, 6.2vw, 2.25rem);
     font-weight: 600;
-    line-height: 1.12;
-    color: var(--color-cream-warm);
-    text-shadow: 0 0 35px rgba(243, 199, 119, 0.35);
+    line-height: 1.1;
+    color: #fff8ed;
+    margin-bottom: 0.35rem;
   }
 
   .mobile-experience-headline .gold-experience {
-    font-size: 2.7rem;
+    font-size: clamp(2.35rem, 8vw, 2.9rem);
     font-weight: 700;
-    color: var(--color-gold-mid);
+    background: linear-gradient(180deg, #ffffff 0%, #fff5e0 25%, #f7cf82 65%, #c8933b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 25px rgba(243, 199, 119, 0.45));
   }
 
   .mobile-desc-copy {
     font-family: var(--font-sans);
-    font-size: 0.85rem;
+    font-size: clamp(0.72rem, 2.4vw, 0.8rem);
     font-weight: 400;
     line-height: 1.55;
-    color: var(--color-cream-pure);
-    max-width: 82vw;
-    margin: 1rem auto 1.4rem auto;
+    color: #f5e6d3;
+    max-width: 84vw;
+    margin: 0.55rem auto 1.15rem auto;
+    text-align: center;
   }
 
   .mobile-cta-column {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.1rem;
+    gap: 0.65rem;
     width: 100%;
   }
 
   .mobile-cta-column .btn-primary-explore-exact {
-    width: 100%;
-    max-width: 280px;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    padding: 12px 24px;
-    font-size: 12.5px;
+    gap: 0.45rem;
+    padding: 0.58rem 1.65rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ffd88a 0%, #f3c777 50%, #d89b3f 100%);
+    color: #140d07;
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(243, 199, 119, 0.45);
+    width: auto;
+    max-width: none;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-cta-column .btn-primary-explore-exact:hover {
+    background: linear-gradient(135deg, #ffe5ab 0%, #ffd88a 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 25px rgba(243, 199, 119, 0.65);
   }
 
   .mobile-cta-column .btn-secondary-categories-exact {
-    font-size: 12.5px;
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    color: #ffd88a;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(243, 199, 119, 0.35);
+    padding-bottom: 2px;
+    margin-top: 0.2rem;
+    opacity: 0.95;
+    transition: all 0.25s ease;
+  }
+
+  .mobile-cta-column .btn-secondary-categories-exact:hover {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+    opacity: 1;
   }
 }
 
