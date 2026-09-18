@@ -126,8 +126,10 @@
     height: 36px;
   }
   .site-header {
-    height: 70px;
+    height: 52px;
     padding: 0 1.25rem;
+    background: transparent;
+    border-bottom: none;
   }
 }
 
