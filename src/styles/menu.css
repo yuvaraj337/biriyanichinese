@@ -199,25 +199,22 @@
 }
 
 @media (max-width: 768px) {
-  .header-location-pill {
-    display: none;
-  }
-  .header-cta {
-    display: none;
-  }
-  .brand-tagline {
-    display: none;
+  .header-location-pill,
+  .header-cta,
+  .brand-tagline,
+  .header-search-btn,
+  .header-menu-btn,
+  .header-mobile-menu-btn,
+  .nav-links {
+    display: none !important;
   }
   .header-brand-img {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
   }
   .site-header {
-    height: 54px;
-    padding: 0 1rem;
-    background: rgba(10, 7, 5, 0.92);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    height: 56px;
+    padding: 0 1.2rem;
   }
 }
 
