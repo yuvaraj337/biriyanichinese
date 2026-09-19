@@ -63,7 +63,11 @@ export const MENU_ITEMS = [
     rating: 4.4,
     reviews: 210,
     image: '/menu_assets/dishes/egg_biryani.png',
-    hasVariants: false,
+    hasVariants: true,
+    variants: [
+      { label: 'Full', price: 100, default: true },
+      { label: 'Half', price: 60 }
+    ],
     defaultPrice: 100,
     popularity: 88
   },
@@ -76,7 +80,11 @@ export const MENU_ITEMS = [
     rating: 4.3,
     reviews: 176,
     image: '/menu_assets/dishes/veg_biryani.png',
-    hasVariants: false,
+    hasVariants: true,
+    variants: [
+      { label: 'Full', price: 100, default: true },
+      { label: 'Half', price: 60 }
+    ],
     defaultPrice: 100,
     popularity: 84
   },

@@ -140,6 +140,7 @@ export class MenuController {
     MENU_CATEGORIES.forEach((cat) => {
       const isActive = cat.id === this.activeCategory;
       const isAll = cat.id === 'all';
+      const displayName = cat.name.includes(' ') ? cat.name.replace(' ', '<br>') : cat.name;
 
       html += `
         <button class="menu-cat-btn ${isActive ? 'is-active' : ''}" data-cat="${cat.id}">
@@ -155,7 +156,7 @@ export class MenuController {
               <img src="${cat.image}" alt="${cat.name}" class="cat-img" loading="lazy" />
             `}
           </div>
-          <span class="cat-label">${cat.name}</span>
+          <span class="cat-label">${displayName}</span>
           <span class="cat-active-bar"></span>
         </button>
       `;
@@ -263,7 +264,7 @@ export class MenuController {
               <span class="dietary-marker"></span>
             </div>
             <button class="food-card-wishlist" aria-label="Add to favorites">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
               </svg>
             </button>
@@ -274,12 +275,12 @@ export class MenuController {
             <img src="${item.image}" alt="${item.name}" class="food-image" loading="lazy" />
           </div>
 
-          <!-- Food Info -->
+          <!-- Food Info Body -->
           <div class="food-card-body">
             <h3 class="food-card-title">${item.name}</h3>
             <p class="food-card-desc">${item.description}</p>
 
-            <!-- Variants Selector if available -->
+            <!-- Variants Selector matching [ Full ₹150 ] [ Half ₹80 ] -->
             ${item.hasVariants ? `
               <div class="food-variant-pills" data-id="${item.id}">
                 ${item.variants.map((v) => `
@@ -288,18 +289,21 @@ export class MenuController {
                   </button>
                 `).join('')}
               </div>
-            ` : ''}
+            ` : `
+              <div class="food-variant-pills single-variant-pills" data-id="${item.id}">
+                <button class="variant-pill is-selected is-single-price" data-label="Standard" data-price="${item.defaultPrice}">
+                  ₹${item.defaultPrice}
+                </button>
+              </div>
+            `}
 
-            <!-- Rating Row -->
-            <div class="food-rating-row">
-              <span class="rating-star">★</span>
-              <span class="rating-val">${item.rating}</span>
-              <span class="rating-count">(${item.reviews})</span>
-            </div>
-
-            <!-- Price & Add Action Row -->
-            <div class="food-card-action-row">
-              <div class="food-card-price" id="price-${item.id}">₹${currentPrice}</div>
+            <!-- Bottom Row: Rating on Left, Add + on Right -->
+            <div class="food-card-bottom-row">
+              <div class="food-rating-row">
+                <span class="rating-star">★</span>
+                <span class="rating-val">${item.rating}</span>
+                <span class="rating-count">(${item.reviews})</span>
+              </div>
 
               <!-- Add Button or Quantity Stepper -->
               <div class="card-action-container" id="action-container-${item.id}">
@@ -311,7 +315,7 @@ export class MenuController {
                   </div>
                 ` : `
                   <button class="btn-card-add" data-id="${item.id}" aria-label="Add ${item.name} to order">
-                    <span class="plus-icon">+</span>
+                    <span>Add +</span>
                   </button>
                 `}
               </div>
