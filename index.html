@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="/src/styles/hero.css" />
   <link rel="stylesheet" href="/src/styles/menu.css" />
   <link rel="stylesheet" href="/src/styles/reservation.css" />
+  <link rel="stylesheet" href="/src/styles/location.css" />
+  <link rel="stylesheet" href="/src/styles/footer.css" />
 </head>
 <body>
 
@@ -867,6 +869,403 @@
         </div>
       </div>
     </section>
+
+    <!-- ==========================================================================
+         LOCATION SECTION — REFERENCE IMAGE 1
+         ========================================================================== -->
+    <section class="location-section" id="location-section">
+      <div class="location-decor-corner"></div>
+      
+      <div class="location-container">
+        <!-- Left Column: Content, Address Card, 4 Info Items, Script Quote -->
+        <div class="location-left-content">
+          <div class="location-eyebrow">Our Location</div>
+          
+          <h2 class="location-title">
+            <span>Visit Our</span>
+            <span>Outlet</span>
+          </h2>
+          
+          <p class="location-desc">
+            Great food deserves a great place. Come dine with us and experience the true taste of Biryani &amp; Chinese District.
+          </p>
+          
+          <!-- Address Card -->
+          <div class="location-address-card">
+            <div class="location-address-info">
+              <svg class="location-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div class="address-text-group">
+                <span class="address-road">Meherma Barahat Pirpanti Road</span>
+                <span class="address-landmark">Near Purana Naaz Cinema Hall,<br />Meherma, Godda, Jharkhand - 814154</span>
+              </div>
+            </div>
+            
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Meherma+Barahat+Pirpanti+Road,+Near+Purana+Naaz+Cinema+Hall,+Godda,+Jharkhand+814154" target="_blank" rel="noopener noreferrer" class="location-directions-btn" id="btn-get-directions">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              <span>Get Directions</span>
+            </a>
+          </div>
+          
+          <!-- 4 Horizontal Info Items -->
+          <div class="location-info-grid">
+            <div class="location-info-item">
+              <div class="info-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <span class="info-item-title">Call Us</span>
+              <span class="info-item-sub"><a href="tel:9334145381">+91 93341 45381</a></span>
+            </div>
+            
+            <div class="location-info-item">
+              <div class="info-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <span class="info-item-title">Opening Hours</span>
+              <span class="info-item-sub">11:00 AM - 11:00 PM<br />(All Days)</span>
+            </div>
+            
+            <div class="location-info-item">
+              <div class="info-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="4" stroke-width="2"></rect>
+                  <path d="M9 17V7h4a3 3 0 0 1 0 6H9" stroke-width="2"></path>
+                </svg>
+              </div>
+              <span class="info-item-title">Parking</span>
+              <span class="info-item-sub">Available</span>
+            </div>
+            
+            <div class="location-info-item">
+              <div class="info-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span class="info-item-title">Dine In</span>
+              <span class="info-item-sub">Family Friendly</span>
+            </div>
+          </div>
+          
+          <!-- Bottom Script Quote -->
+          <div class="location-quote-block">
+            <svg class="location-leaf-emblem" viewBox="0 0 32 40" fill="none">
+              <path d="M12 28C12 20 18 14 26 12C26 20 20 26 12 28Z" fill="#d4a359" opacity="0.9"/>
+              <path d="M8 38C14 34 22 28 26 12" stroke="#d4a359" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+            <div class="quote-text-group">
+              <span class="location-script-quote">&ldquo;Good Food Brings People Together&rdquo;</span>
+              <span class="location-brand-sub">Biryani &amp; Chinese District</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Column: Enclosed Container (Storefront + Map + Google Maps CTA) -->
+        <div class="location-right-container">
+          <div class="location-storefront-wrapper">
+            <img 
+              src="/location_assets/outlet_storefront.png" 
+              alt="Biryani &amp; Chinese District Luxury Outlet Storefront at Night" 
+              class="location-storefront-img"
+              loading="lazy"
+            />
+          </div>
+          
+          <div class="location-map-wrapper">
+            <img 
+              src="/location_assets/dark_map.png" 
+              alt="Biryani &amp; Chinese District Location Map" 
+              class="location-map-img"
+              loading="lazy"
+            />
+          </div>
+          
+          <div class="location-map-footer">
+            <a href="https://maps.google.com/?q=Meherma+Barahat+Pirpanti Road,+Near+Purana+Naaz+Cinema+Hall,+Godda,+Jharkhand+814154" target="_blank" rel="noopener noreferrer" class="btn-open-gmaps" id="btn-open-gmaps">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                <line x1="8" y1="2" x2="8" y2="18"></line>
+                <line x1="16" y1="6" x2="16" y2="22"></line>
+              </svg>
+              <span>Open in Google Maps &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FOOTER SECTION — REFERENCE IMAGE 2
+         ========================================================================== -->
+    <footer class="site-footer" id="site-footer">
+      <!-- 1. Top Cinematic Banner Band -->
+      <div class="footer-banner-wrapper">
+        <div class="footer-cinematic-banner">
+          <div class="footer-banner-watermark">
+            <span>Biryani</span>
+            <span>Chinese</span>
+            <span>People</span>
+            <span>Memories</span>
+          </div>
+          
+          <div class="footer-banner-left">
+            <div class="footer-quote-header">
+              <svg class="footer-gold-leaf" viewBox="0 0 32 40" fill="none">
+                <path d="M12 28C12 20 18 14 26 12C26 20 20 26 12 28Z" fill="#d4a359" opacity="0.95"/>
+                <path d="M8 38C14 34 22 28 26 12" stroke="#d4a359" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+              <h3 class="footer-banner-title">
+                <span class="quote-mark">&ldquo;</span>Good Food<br />Brings People Together<span class="quote-mark">&rdquo;</span>
+              </h3>
+            </div>
+            
+            <div class="footer-banner-brand-sub">Biryani &amp; Chinese District</div>
+            
+            <p class="footer-banner-desc">
+              Thank you for being a part of our delicious journey. We look forward to serving you again!
+            </p>
+          </div>
+          
+          <div class="footer-banner-right">
+            <img 
+              src="/footer_assets/footer_biryani_dish.png" 
+              alt="Authentic Dum Biryani Handi" 
+              class="footer-biryani-img" 
+            />
+            <div class="footer-script-stories">
+              <span>Same Taste</span>
+              <span>Bigger Stories</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 2. Main 4-Column Footer Grid -->
+      <div class="footer-main-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-col-brand">
+          <a href="#" class="footer-brand-header" aria-label="Biryani &amp; Chinese District Home">
+            <img src="/menu_assets/restaurant_logo.png" alt="Biryani &amp; Chinese District Logo" class="footer-brand-logo-img" />
+            <div class="footer-brand-text">
+              <span class="footer-brand-title">BIRYANI &amp; CHINESE</span>
+              <span class="footer-brand-subtitle">DISTRICT</span>
+              <span class="footer-brand-tagline">BIRYANI MEETS A BIGGER WORLD</span>
+            </div>
+          </a>
+          
+          <p class="footer-brand-desc">
+            Authentic Biryani. Irresistible Chinese. Great food, happier people. Experience the perfect blend of tradition and taste at Biryani &amp; Chinese District.
+          </p>
+          
+          <div class="footer-social-strip">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#0b0704"></polygon>
+              </svg>
+            </a>
+            <a href="https://wa.me/919334145381" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col-links">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#hero-scroll-wrapper">Home</a></li>
+            <li class="footer-link-item"><a href="#menu-section">Menu</a></li>
+            <li class="footer-link-item"><a href="#specials-section">Our Story</a></li>
+            <li class="footer-link-item"><a href="#location-section">Outlets</a></li>
+            <li class="footer-link-item"><a href="#location-section">Contact</a></li>
+            <li class="footer-link-item"><a href="#specials-section">Offers</a></li>
+          </ul>
+        </div>
+        
+        <!-- Col 3: Our Outlets -->
+        <div class="footer-col-outlets">
+          <h4 class="footer-col-title">Our Outlets</h4>
+          <ul class="footer-outlets-list">
+            <li class="footer-outlet-item">
+              <svg class="outlet-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Meherma, Godda</span>
+              <span class="outlet-main-badge">Main Outlet</span>
+            </li>
+            <li class="footer-outlet-item">
+              <svg class="outlet-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Poreyahat</span>
+            </li>
+            <li class="footer-outlet-item">
+              <svg class="outlet-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Mahagama</span>
+            </li>
+            <li class="footer-outlet-item">
+              <svg class="outlet-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Pathargama</span>
+            </li>
+            <li class="footer-outlet-item">
+              <svg class="outlet-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Additional Outlets Soon</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col-newsletter">
+          <h4 class="footer-col-title">Newsletter</h4>
+          <p class="newsletter-desc">
+            Get the latest updates, offers and special menus straight to your inbox.
+          </p>
+          
+          <form class="newsletter-form" id="footer-newsletter-form" novalidate>
+            <div class="newsletter-input-group">
+              <input 
+                type="email" 
+                class="newsletter-input" 
+                id="newsletter-email" 
+                placeholder="Enter your email address" 
+                required 
+              />
+              <button type="submit" class="newsletter-submit-btn" id="btn-newsletter-subscribe">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Subscribe</span>
+              </button>
+            </div>
+            
+            <label class="newsletter-consent-label">
+              <input type="checkbox" id="newsletter-consent" checked />
+              <span>I agree to receive updates and offers.</span>
+            </label>
+            
+            <div class="newsletter-feedback" id="newsletter-feedback">
+              Thank you for subscribing to Biryani &amp; Chinese District!
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <!-- 3. Lower Footer Feature Strip (Clean, without the architectural graphic) -->
+      <div class="footer-features-strip">
+        <div class="footer-features-container">
+          <div class="footer-feature-item">
+            <div class="feature-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <div class="feature-text-group">
+              <span class="feature-title">Fresh Ingredients</span>
+              <span class="feature-sub">Always the best</span>
+            </div>
+          </div>
+          
+          <div class="footer-feature-item">
+            <div class="feature-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6z"></path>
+                <line x1="6" y1="17" x2="18" y2="17"></line>
+              </svg>
+            </div>
+            <div class="feature-text-group">
+              <span class="feature-title">Expertly Cooked</span>
+              <span class="feature-sub">With passion</span>
+            </div>
+          </div>
+          
+          <div class="footer-feature-item">
+            <div class="feature-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="feature-text-group">
+              <span class="feature-title">Great Ambience</span>
+              <span class="feature-sub">For everyone</span>
+            </div>
+          </div>
+          
+          <div class="footer-feature-item">
+            <div class="feature-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <div class="feature-text-group">
+              <span class="feature-title">Happier People</span>
+              <span class="feature-sub">One meal at a time</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 4. Final Copyright Bar -->
+      <div class="footer-copyright-bar">
+        <p class="footer-copyright-text">&copy; 2024 Biryani &amp; Chinese District. All rights reserved.</p>
+        
+        <div class="footer-legal-links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <span class="footer-legal-divider">|</span>
+          <a href="#" class="footer-legal-link">Terms &amp; Conditions</a>
+          <span class="footer-legal-divider">|</span>
+          <a href="#" class="footer-legal-link">Refund Policy</a>
+          <span class="footer-legal-divider">|</span>
+          <a href="#" class="footer-legal-link">Sitemap</a>
+        </div>
+        
+        <div class="footer-made-with">
+          <span>Made with <span class="heart-icon">&hearts;</span> in Jharkhand</span>
+        </div>
+      </div>
+    </footer>
 
     <!-- ==========================================================================
          STICKY BOTTOM CART BAR

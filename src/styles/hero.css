@@ -105,7 +105,7 @@ html, body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2.8rem;
+  gap: clamp(1rem, 1.8vw, 2rem);
   list-style: none;
 }
 

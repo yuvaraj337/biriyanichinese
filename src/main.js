@@ -163,6 +163,46 @@ class App {
     if (viewCategoriesBtn) viewCategoriesBtn.addEventListener('click', smoothScrollToCategories);
     if (mobileViewCategoriesBtn) mobileViewCategoriesBtn.addEventListener('click', smoothScrollToCategories);
     if (reserveBtn) reserveBtn.addEventListener('click', smoothScrollToMenu);
+
+    // Location Pill Smooth Scroll
+    const locationPill = document.getElementById('header-location-pill');
+    const locationSection = document.getElementById('location-section');
+    if (locationPill && locationSection) {
+      locationPill.addEventListener('click', (e) => {
+        e.preventDefault();
+        locationSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+    // Newsletter Form Handling
+    const newsletterForm = document.getElementById('footer-newsletter-form');
+    const newsletterEmail = document.getElementById('newsletter-email');
+    const newsletterFeedback = document.getElementById('newsletter-feedback');
+
+    if (newsletterForm && newsletterEmail && newsletterFeedback) {
+      newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = newsletterEmail.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!email || !emailRegex.test(email)) {
+          newsletterFeedback.textContent = 'Please enter a valid email address.';
+          newsletterFeedback.style.color = '#e74c3c';
+          newsletterFeedback.classList.add('visible');
+          newsletterEmail.focus();
+          return;
+        }
+
+        newsletterFeedback.textContent = 'Thank you for subscribing to Biryani & Chinese District!';
+        newsletterFeedback.style.color = '#55d985';
+        newsletterFeedback.classList.add('visible');
+        newsletterEmail.value = '';
+
+        setTimeout(() => {
+          newsletterFeedback.classList.remove('visible');
+        }, 5000);
+      });
+    }
   }
 }
 
