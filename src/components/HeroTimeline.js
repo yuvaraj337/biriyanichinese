@@ -131,7 +131,24 @@ export class HeroTimeline {
       const enterDuration = Math.max(0.01, active - start);
       const exitDuration = Math.max(0.01, end - (active + 0.05));
 
-      if (progress < active) {
+      const isOpeningStage = stage.id === 'phase-1' || start === 0;
+
+      if (isOpeningStage) {
+        if (progress <= active) {
+          // Opening stage: immediately active and visible on website open without requiring scroll
+          opacity = 1;
+          translateY = 0;
+          scale = 1;
+        } else if (exitDuration > 0) {
+          // Smooth exit as user scrolls deeper into the journey
+          const t = (progress - active) / exitDuration;
+          const clampedT = Math.min(1, Math.max(0, t));
+          const easeT = clampedT * clampedT * (3 - 2 * clampedT);
+          opacity = 1 - easeT;
+          translateY = -24 * easeT;
+          scale = 1 + 0.02 * easeT;
+        }
+      } else if (progress < active) {
         // Entering
         const t = (progress - start) / enterDuration;
         const easeT = t * t * (3 - 2 * t); // smoothstep
